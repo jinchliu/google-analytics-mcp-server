@@ -1,0 +1,63 @@
+{
+  "CustomDimension": [
+    {"title": "Event-scoped campaign label", "api_versions": ["v1beta", "v1alpha"], "body": {"parameterName": "campaign_label", "displayName": "Campaign label", "scope": "EVENT", "description": "Campaign label sent with the event."}}
+  ],
+  "CustomMetric": [
+    {"title": "Event-scoped score", "api_versions": ["v1beta", "v1alpha"], "body": {"parameterName": "engagement_score", "displayName": "Engagement score", "scope": "EVENT", "measurementUnit": "STANDARD"}}
+  ],
+  "KeyEvent": [
+    {"title": "Mark an existing event as a key event", "api_versions": ["v1beta", "v1alpha"], "body": {"eventName": "generate_lead", "countingMethod": "ONCE_PER_EVENT"}}
+  ],
+  "DataStream": [
+    {"title": "Create a web stream", "api_versions": ["v1beta", "v1alpha"], "body": {"displayName": "Example website", "type": "WEB_DATA_STREAM", "webStreamData": {"defaultUri": "https://example.com"}}},
+    {"title": "Patch only the default URI", "api_versions": ["v1beta", "v1alpha"], "body": {"webStreamData": {"defaultUri": "https://shop.example.com"}}}
+  ],
+  "ReportingDataAnnotation": [
+    {"title": "Release-day annotation", "api_versions": ["v1alpha"], "body": {"title": "Website release", "description": "New checkout released.", "annotationDate": {"year": 2026, "month": 9, "day": 1}, "color": "BLUE"}}
+  ],
+  "AccessBinding": [
+    {"title": "Grant viewer access, confirmation required", "api_versions": ["v1alpha"], "body": {"user": "analyst@example.com", "roles": ["predefinedRoles/viewer"]}},
+    {"title": "Delete an existing binding through empty roles, confirmation required", "api_versions": ["v1alpha"], "body": {"name": "properties/123/accessBindings/456", "roles": []}}
+  ],
+  "BatchCreateAccessBindingsRequest": [
+    {"title": "Create a binding in a true batch request", "api_versions": ["v1alpha"], "body": {"requests": [{"parent": "properties/123", "accessBinding": {"user": "analyst@example.com", "roles": ["predefinedRoles/viewer"]}}]}}
+  ],
+  "BatchUpdateAccessBindingsRequest": [
+    {"title": "Send the complete intended role set", "api_versions": ["v1alpha"], "body": {"requests": [{"accessBinding": {"name": "properties/123/accessBindings/456", "roles": ["predefinedRoles/analyst"]}}]}}
+  ],
+  "BatchDeleteAccessBindingsRequest": [
+    {"title": "Delete named bindings, confirmation required", "api_versions": ["v1alpha"], "body": {"requests": [{"name": "properties/123/accessBindings/456"}]}}
+  ],
+  "GoogleAdsLink": [
+    {"title": "Link a Google Ads customer", "api_versions": ["v1beta", "v1alpha"], "body": {"customerId": "1234567890", "adsPersonalizationEnabled": false}}
+  ],
+  "BigQueryLink": [
+    {"title": "Daily export to a chosen project", "api_versions": ["v1alpha"], "body": {"project": "projects/YOUR_PROJECT", "datasetLocation": "US", "dailyExportEnabled": true, "streamingExportEnabled": false, "includeAdvertisingId": false, "exportStreams": ["properties/123/dataStreams/456"]}}
+  ],
+  "Audience": [
+    {"title": "Simple purchase audience", "api_versions": ["v1alpha"], "body": {"displayName": "Purchasers", "description": "Users who purchased within the membership window.", "membershipDurationDays": 30, "filterClauses": [{"clauseType": "INCLUDE", "simpleFilter": {"scope": "AUDIENCE_FILTER_SCOPE_ACROSS_ALL_SESSIONS", "filterExpression": {"andGroup": {"filterExpressions": [{"orGroup": {"filterExpressions": [{"eventFilter": {"eventName": "purchase"}}]}}]}}}}]}},
+    {"title": "View then purchase sequence", "api_versions": ["v1alpha"], "body": {"displayName": "View then purchase", "description": "Users who viewed an item and later purchased.", "membershipDurationDays": 30, "filterClauses": [{"clauseType": "INCLUDE", "sequenceFilter": {"scope": "AUDIENCE_FILTER_SCOPE_ACROSS_ALL_SESSIONS", "sequenceMaximumDuration": "604800s", "sequenceSteps": [{"scope": "AUDIENCE_FILTER_SCOPE_WITHIN_SAME_EVENT", "filterExpression": {"andGroup": {"filterExpressions": [{"orGroup": {"filterExpressions": [{"eventFilter": {"eventName": "view_item"}}]}}]}}}, {"scope": "AUDIENCE_FILTER_SCOPE_WITHIN_SAME_EVENT", "immediatelyFollows": false, "filterExpression": {"andGroup": {"filterExpressions": [{"orGroup": {"filterExpressions": [{"eventFilter": {"eventName": "purchase"}}]}}]}}}]}}]}}
+  ],
+  "ChannelGroup": [
+    {"title": "Email channel group", "api_versions": ["v1alpha"], "body": {"displayName": "Example channels", "description": "An example custom channel group.", "groupingRule": [{"displayName": "Email", "expression": {"andGroup": {"filterExpressions": [{"orGroup": {"filterExpressions": [{"filter": {"fieldName": "medium", "stringFilter": {"matchType": "EXACT", "value": "email"}}}]}}]}}}]}}
+  ],
+  "CalculatedMetric": [
+    {"title": "Events per user, supply resource_id separately", "api_versions": ["v1alpha"], "body": {"displayName": "Events per user", "description": "Event count divided by total users.", "formula": "eventCount / totalUsers", "metricUnit": "STANDARD"}}
+  ],
+  "EventCreateRule": [
+    {"title": "Create a thank-you page event", "api_versions": ["v1alpha"], "body": {"destinationEvent": "thank_you_view", "eventConditions": [{"field": "event_name", "comparisonType": "EQUALS", "value": "page_view"}, {"field": "page_location", "comparisonType": "CONTAINS", "value": "/thank-you"}], "sourceCopyParameters": true}}
+  ],
+  "EventEditRule": [
+    {"title": "Label a login event", "api_versions": ["v1alpha"], "body": {"displayName": "Label login", "eventConditions": [{"field": "event_name", "comparisonType": "EQUALS", "value": "login"}], "parameterMutations": [{"parameter": "login_source", "parameterValue": "website"}]}}
+  ],
+  "ExpandedDataSet": [
+    {"title": "Country and active users", "api_versions": ["v1alpha"], "body": {"displayName": "Country users", "description": "Expanded country report.", "dimensionNames": ["country"], "metricNames": ["activeUsers"]}}
+  ],
+  "SubpropertyEventFilter": [
+    {"title": "Send purchases to a subproperty", "api_versions": ["v1alpha"], "body": {"applyToProperty": "properties/456", "filterClauses": [{"filterClauseType": "INCLUDE", "filterExpression": {"orGroup": {"filterExpressions": [{"filterCondition": {"fieldName": "eventName", "stringFilter": {"matchType": "EXACT", "value": "purchase"}}}]}}}]}}
+  ],
+  "RunAccessReportRequest": [
+    {"title": "Property access report with quota", "api_versions": ["v1beta", "v1alpha"], "body": {"dateRanges": [{"startDate": "7daysAgo", "endDate": "yesterday"}], "dimensions": [{"dimensionName": "userEmail"}], "metrics": [{"metricName": "accessCount"}], "limit": "100", "returnEntityQuota": true}},
+    {"title": "Account access report without quota", "api_versions": ["v1beta", "v1alpha"], "body": {"dateRanges": [{"startDate": "7daysAgo", "endDate": "yesterday"}], "dimensions": [{"dimensionName": "userEmail"}], "metrics": [{"metricName": "accessCount"}], "limit": "100", "returnEntityQuota": false}}
+  ]
+}

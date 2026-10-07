@@ -1,0 +1,58 @@
+{
+  "RunReportRequest": [
+    {"title": "Users by country", "api_versions": ["v1beta", "v1alpha"], "body": {"dateRanges": [{"startDate": "28daysAgo", "endDate": "yesterday"}], "dimensions": [{"name": "country"}], "metrics": [{"name": "activeUsers"}], "limit": "100", "returnPropertyQuota": true}},
+    {"title": "Cohort report without top-level dateRanges", "api_versions": ["v1beta", "v1alpha"], "body": {"dimensions": [{"name": "cohort"}, {"name": "cohortNthDay"}], "metrics": [{"name": "cohortActiveUsers"}], "cohortSpec": {"cohorts": [{"name": "September", "dimension": "firstSessionDate", "dateRange": {"startDate": "2026-09-01", "endDate": "2026-09-07"}}], "cohortsRange": {"granularity": "DAILY", "endOffset": 7}}, "limit": "100"}},
+    {"title": "Two named date ranges", "api_versions": ["v1beta", "v1alpha"], "body": {"dateRanges": [{"startDate": "14daysAgo", "endDate": "8daysAgo", "name": "previous_week"}, {"startDate": "7daysAgo", "endDate": "yesterday", "name": "last_week"}], "dimensions": [{"name": "country"}], "metrics": [{"name": "activeUsers"}], "limit": "100"}}
+  ],
+  "FilterExpression": [
+    {"title": "String match", "api_versions": ["v1beta", "v1alpha"], "body": {"filter": {"fieldName": "eventName", "stringFilter": {"matchType": "EXACT", "value": "purchase"}}}},
+    {"title": "In-list match", "api_versions": ["v1beta", "v1alpha"], "body": {"filter": {"fieldName": "country", "inListFilter": {"values": ["United States", "Canada"], "caseSensitive": false}}}},
+    {"title": "Numeric threshold", "api_versions": ["v1beta", "v1alpha"], "body": {"filter": {"fieldName": "eventCount", "numericFilter": {"operation": "GREATER_THAN", "value": {"int64Value": "10"}}}}},
+    {"title": "Numeric range", "api_versions": ["v1beta", "v1alpha"], "body": {"filter": {"fieldName": "eventCount", "betweenFilter": {"fromValue": {"int64Value": "10"}, "toValue": {"int64Value": "100"}}}}},
+    {"title": "AND group", "api_versions": ["v1beta", "v1alpha"], "body": {"andGroup": {"expressions": [{"filter": {"fieldName": "country", "stringFilter": {"matchType": "EXACT", "value": "Canada"}}}, {"filter": {"fieldName": "deviceCategory", "stringFilter": {"matchType": "EXACT", "value": "mobile"}}}]}}},
+    {"title": "OR group", "api_versions": ["v1beta", "v1alpha"], "body": {"orGroup": {"expressions": [{"filter": {"fieldName": "eventName", "stringFilter": {"matchType": "EXACT", "value": "purchase"}}}, {"filter": {"fieldName": "eventName", "stringFilter": {"matchType": "EXACT", "value": "generate_lead"}}}]}}},
+    {"title": "NOT filter", "api_versions": ["v1beta", "v1alpha"], "body": {"notExpression": {"filter": {"fieldName": "deviceCategory", "stringFilter": {"matchType": "EXACT", "value": "tablet"}}}}}
+  ],
+  "OrderBy": [
+    {"title": "Descending active users", "api_versions": ["v1beta", "v1alpha"], "body": {"metric": {"metricName": "activeUsers"}, "desc": true}}
+  ],
+  "DateRange": [
+    {"title": "Last 28 complete days", "api_versions": ["v1beta", "v1alpha"], "body": {"startDate": "28daysAgo", "endDate": "yesterday"}}
+  ],
+  "Comparison": [
+    {"title": "Mobile comparison", "api_versions": ["v1beta", "v1alpha"], "body": {"name": "Mobile", "dimensionFilter": {"filter": {"fieldName": "deviceCategory", "stringFilter": {"matchType": "EXACT", "value": "mobile"}}}}}
+  ],
+  "CohortSpec": [
+    {"title": "Daily retention cohort", "api_versions": ["v1beta", "v1alpha"], "body": {"cohorts": [{"name": "September", "dimension": "firstSessionDate", "dateRange": {"startDate": "2026-09-01", "endDate": "2026-09-07"}}], "cohortsRange": {"granularity": "DAILY", "startOffset": 0, "endOffset": 7}}}
+  ],
+  "ConversionSpec": [
+    {"title": "Alpha conversion reporting for an eligible property", "api_versions": ["v1alpha"], "body": {"conversionActions": ["conversionActions/1234"], "attributionModel": "DATA_DRIVEN"}}
+  ],
+  "Pivot": [
+    {"title": "Country pivot page", "api_versions": ["v1beta"], "body": {"fieldNames": ["country"], "offset": "0", "limit": "20"}}
+  ],
+  "RunPivotReportRequest": [
+    {"title": "Country by device pivot", "api_versions": ["v1beta"], "body": {"dateRanges": [{"startDate": "7daysAgo", "endDate": "yesterday"}], "dimensions": [{"name": "country"}, {"name": "deviceCategory"}], "metrics": [{"name": "activeUsers"}], "pivots": [{"fieldNames": ["country"], "limit": "20"}, {"fieldNames": ["deviceCategory"], "limit": "3"}]}}
+  ],
+  "RunRealtimeReportRequest": [
+    {"title": "Realtime users by country", "api_versions": ["v1beta"], "body": {"dimensions": [{"name": "country"}], "metrics": [{"name": "activeUsers"}], "limit": "100"}}
+  ],
+  "CheckCompatibilityRequest": [
+    {"title": "Check a dimension and metric pair", "api_versions": ["v1beta"], "body": {"dimensions": [{"name": "country"}], "metrics": [{"name": "activeUsers"}]}}
+  ],
+  "RunFunnelReportRequest": [
+    {"title": "View to purchase funnel by device", "api_versions": ["v1alpha"], "body": {"dateRanges": [{"startDate": "7daysAgo", "endDate": "yesterday"}], "funnel": {"isOpenFunnel": false, "steps": [{"name": "View item", "filterExpression": {"funnelEventFilter": {"eventName": "view_item"}}}, {"name": "Purchase", "filterExpression": {"funnelEventFilter": {"eventName": "purchase"}}}]}, "funnelBreakdown": {"breakdownDimension": {"name": "deviceCategory"}, "limit": "3"}, "limit": "100"}}
+  ],
+  "Funnel": [
+    {"title": "Closed view to purchase funnel", "api_versions": ["v1alpha"], "body": {"isOpenFunnel": false, "steps": [{"name": "View item", "filterExpression": {"funnelEventFilter": {"eventName": "view_item"}}}, {"name": "Purchase", "filterExpression": {"funnelEventFilter": {"eventName": "purchase"}}}]}}
+  ],
+  "ReportTask": [
+    {"title": "Create a bounded report task", "api_versions": ["v1alpha"], "body": {"reportDefinition": {"dateRanges": [{"startDate": "7daysAgo", "endDate": "yesterday"}], "dimensions": [{"name": "country"}], "metrics": [{"name": "activeUsers"}], "limit": "1000"}}}
+  ],
+  "AudienceExport": [
+    {"title": "Export an existing audience", "api_versions": ["v1beta"], "body": {"audience": "properties/123/audiences/456", "dimensions": [{"dimensionName": "deviceId"}]}}
+  ],
+  "AudienceList": [
+    {"title": "Create an alpha audience list", "api_versions": ["v1alpha"], "body": {"audience": "properties/123/audiences/456", "dimensions": [{"dimensionName": "deviceId"}]}}
+  ]
+}

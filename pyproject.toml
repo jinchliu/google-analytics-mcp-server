@@ -1,0 +1,79 @@
+[project]
+name = "google-analytics-mcp-server"
+version = "0.1.0"
+description = "A stdio MCP server for Google Analytics with full coverage of the Admin and Data APIs."
+readme = "README.md"
+authors = [
+    { name = "Jinchao Liu", email = "jinchaoliu09@gmail.com" }
+]
+requires-python = ">=3.14"
+license = "MIT"
+license-files = ["LICENSE"]
+keywords = ["mcp", "google-analytics", "ga4", "analytics", "llm"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.14",
+]
+dependencies = [
+    "google-api-python-client>=2.200.0",
+    "mcp>=2.2,<3",
+]
+
+[project.urls]
+Repository = "https://github.com/jinchliu/google-analytics-mcp-server"
+Issues = "https://github.com/jinchliu/google-analytics-mcp-server/issues"
+Changelog = "https://github.com/jinchliu/google-analytics-mcp-server/blob/main/CHANGELOG.md"
+
+[project.scripts]
+google-analytics-mcp-server = "google_analytics_mcp_server:main"
+
+[build-system]
+requires = ["uv_build>=0.12.17,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "mypy>=2.3.1",
+    "pre-commit>=4.6.2",
+    "pytest>=9.1.1",
+    "pytest-cov>=7.1.0",
+    "ruff>=0.16.8",
+]
+
+[tool.ruff]
+target-version = "py314"
+src = ["src"]
+
+[tool.ruff.format]
+quote-style = "single"
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I", "B", "UP"]
+
+[tool.mypy]
+strict = true
+files = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra --strict-markers --strict-config"
+markers = [
+    "live: opt-in Google API tests requiring ADC",
+    "live_write: sandbox mutations requiring a dry-run plan and execution journal",
+]
+
+[tool.coverage.run]
+source = ["google_analytics_mcp_server"]
+branch = true
+
+[tool.coverage.report]
+show_missing = true
+fail_under = 90
+
+[[tool.mypy.overrides]]
+module = ["googleapiclient.*", "google_auth_httplib2", "httplib2"]
+ignore_missing_imports = true

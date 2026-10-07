@@ -1,0 +1,766 @@
+{
+  "admin:accountSummaries.list": {
+    "default_version": "v1beta",
+    "tool": "ga_list"
+  },
+  "admin:accounts.accessBindings.batchCreate": {
+    "default_version": "v1alpha",
+    "tool": "ga_manage_access_bindings"
+  },
+  "admin:accounts.accessBindings.batchDelete": {
+    "default_version": "v1alpha",
+    "tool": "ga_manage_access_bindings"
+  },
+  "admin:accounts.accessBindings.batchGet": {
+    "default_version": "v1alpha",
+    "tool": "ga_list"
+  },
+  "admin:accounts.accessBindings.batchUpdate": {
+    "default_version": "v1alpha",
+    "tool": "ga_manage_access_bindings"
+  },
+  "admin:accounts.accessBindings.create": {
+    "default_version": "v1alpha",
+    "tool": "ga_manage_access_bindings"
+  },
+  "admin:accounts.accessBindings.delete": {
+    "default_version": "v1alpha",
+    "tool": "ga_manage_access_bindings"
+  },
+  "admin:accounts.accessBindings.get": {
+    "default_version": "v1alpha",
+    "tool": "ga_get"
+  },
+  "admin:accounts.accessBindings.list": {
+    "default_version": "v1alpha",
+    "tool": "ga_list"
+  },
+  "admin:accounts.accessBindings.patch": {
+    "default_version": "v1alpha",
+    "tool": "ga_manage_access_bindings"
+  },
+  "admin:accounts.delete": {
+    "default_version": "v1beta",
+    "tool": "ga_delete"
+  },
+  "admin:accounts.get": {
+    "default_version": "v1beta",
+    "tool": "ga_get"
+  },
+  "admin:accounts.getDataSharingSettings": {
+    "default_version": "v1beta",
+    "tool": "ga_get"
+  },
+  "admin:accounts.list": {
+    "default_version": "v1beta",
+    "tool": "ga_list"
+  },
+  "admin:accounts.patch": {
+    "default_version": "v1beta",
+    "tool": "ga_update"
+  },
+  "admin:accounts.provisionAccountTicket": {
+    "default_version": "v1beta",
+    "tool": "ga_provision_account_ticket"
+  },
+  "admin:accounts.runAccessReport": {
+    "default_version": "v1beta",
+    "tool": "ga_run_access_report"
+  },
+  "admin:accounts.searchChangeHistoryEvents": {
+    "default_version": "v1alpha",
+    "tool": "ga_search_change_history"
+  },
+  "admin:properties.accessBindings.batchCreate": {
+    "default_version": "v1alpha",
+    "tool": "ga_manage_access_bindings"
+  },
+  "admin:properties.accessBindings.batchDelete": {
+    "default_version": "v1alpha",
+    "tool": "ga_manage_access_bindings"
+  },
+  "admin:properties.accessBindings.batchGet": {
+    "default_version": "v1alpha",
+    "tool": "ga_list"
+  },
+  "admin:properties.accessBindings.batchUpdate": {
+    "default_version": "v1alpha",
+    "tool": "ga_manage_access_bindings"
+  },
+  "admin:properties.accessBindings.create": {
+    "default_version": "v1alpha",
+    "tool": "ga_manage_access_bindings"
+  },
+  "admin:properties.accessBindings.delete": {
+    "default_version": "v1alpha",
+    "tool": "ga_manage_access_bindings"
+  },
+  "admin:properties.accessBindings.get": {
+    "default_version": "v1alpha",
+    "tool": "ga_get"
+  },
+  "admin:properties.accessBindings.list": {
+    "default_version": "v1alpha",
+    "tool": "ga_list"
+  },
+  "admin:properties.accessBindings.patch": {
+    "default_version": "v1alpha",
+    "tool": "ga_manage_access_bindings"
+  },
+  "admin:properties.acknowledgeUserDataCollection": {
+    "default_version": "v1beta",
+    "tool": "ga_acknowledge_user_data_collection"
+  },
+  "admin:properties.adSenseLinks.create": {
+    "default_version": "v1alpha",
+    "tool": "ga_create"
+  },
+  "admin:properties.adSenseLinks.delete": {
+    "default_version": "v1alpha",
+    "tool": "ga_delete"
+  },
+  "admin:properties.adSenseLinks.get": {
+    "default_version": "v1alpha",
+    "tool": "ga_get"
+  },
+  "admin:properties.adSenseLinks.list": {
+    "default_version": "v1alpha",
+    "tool": "ga_list"
+  },
+  "admin:properties.audiences.archive": {
+    "default_version": "v1alpha",
+    "tool": "ga_delete"
+  },
+  "admin:properties.audiences.create": {
+    "default_version": "v1alpha",
+    "tool": "ga_create"
+  },
+  "admin:properties.audiences.get": {
+    "default_version": "v1alpha",
+    "tool": "ga_get"
+  },
+  "admin:properties.audiences.list": {
+    "default_version": "v1alpha",
+    "tool": "ga_list"
+  },
+  "admin:properties.audiences.patch": {
+    "default_version": "v1alpha",
+    "tool": "ga_update"
+  },
+  "admin:properties.bigQueryLinks.create": {
+    "default_version": "v1alpha",
+    "tool": "ga_create"
+  },
+  "admin:properties.bigQueryLinks.delete": {
+    "default_version": "v1alpha",
+    "tool": "ga_delete"
+  },
+  "admin:properties.bigQueryLinks.get": {
+    "default_version": "v1alpha",
+    "tool": "ga_get"
+  },
+  "admin:properties.bigQueryLinks.list": {
+    "default_version": "v1alpha",
+    "tool": "ga_list"
+  },
+  "admin:properties.bigQueryLinks.patch": {
+    "default_version": "v1alpha",
+    "tool": "ga_update"
+  },
+  "admin:properties.calculatedMetrics.create": {
+    "default_version": "v1alpha",
+    "tool": "ga_create"
+  },
+  "admin:properties.calculatedMetrics.delete": {
+    "default_version": "v1alpha",
+    "tool": "ga_delete"
+  },
+  "admin:properties.calculatedMetrics.get": {
+    "default_version": "v1alpha",
+    "tool": "ga_get"
+  },
+  "admin:properties.calculatedMetrics.list": {
+    "default_version": "v1alpha",
+    "tool": "ga_list"
+  },
+  "admin:properties.calculatedMetrics.patch": {
+    "default_version": "v1alpha",
+    "tool": "ga_update"
+  },
+  "admin:properties.channelGroups.create": {
+    "default_version": "v1alpha",
+    "tool": "ga_create"
+  },
+  "admin:properties.channelGroups.delete": {
+    "default_version": "v1alpha",
+    "tool": "ga_delete"
+  },
+  "admin:properties.channelGroups.get": {
+    "default_version": "v1alpha",
+    "tool": "ga_get"
+  },
+  "admin:properties.channelGroups.list": {
+    "default_version": "v1alpha",
+    "tool": "ga_list"
+  },
+  "admin:properties.channelGroups.patch": {
+    "default_version": "v1alpha",
+    "tool": "ga_update"
+  },
+  "admin:properties.conversionEvents.create": {
+    "default_version": "v1beta",
+    "tool": "ga_create"
+  },
+  "admin:properties.conversionEvents.delete": {
+    "default_version": "v1beta",
+    "tool": "ga_delete"
+  },
+  "admin:properties.conversionEvents.get": {
+    "default_version": "v1beta",
+    "tool": "ga_get"
+  },
+  "admin:properties.conversionEvents.list": {
+    "default_version": "v1beta",
+    "tool": "ga_list"
+  },
+  "admin:properties.conversionEvents.patch": {
+    "default_version": "v1beta",
+    "tool": "ga_update"
+  },
+  "admin:properties.create": {
+    "default_version": "v1beta",
+    "tool": "ga_create"
+  },
+  "admin:properties.createRollupProperty": {
+    "default_version": "v1alpha",
+    "tool": "ga_create_rollup_property"
+  },
+  "admin:properties.customDimensions.archive": {
+    "default_version": "v1beta",
+    "tool": "ga_delete"
+  },
+  "admin:properties.customDimensions.create": {
+    "default_version": "v1beta",
+    "tool": "ga_create"
+  },
+  "admin:properties.customDimensions.get": {
+    "default_version": "v1beta",
+    "tool": "ga_get"
+  },
+  "admin:properties.customDimensions.list": {
+    "default_version": "v1beta",
+    "tool": "ga_list"
+  },
+  "admin:properties.customDimensions.patch": {
+    "default_version": "v1beta",
+    "tool": "ga_update"
+  },
+  "admin:properties.customMetrics.archive": {
+    "default_version": "v1beta",
+    "tool": "ga_delete"
+  },
+  "admin:properties.customMetrics.create": {
+    "default_version": "v1beta",
+    "tool": "ga_create"
+  },
+  "admin:properties.customMetrics.get": {
+    "default_version": "v1beta",
+    "tool": "ga_get"
+  },
+  "admin:properties.customMetrics.list": {
+    "default_version": "v1beta",
+    "tool": "ga_list"
+  },
+  "admin:properties.customMetrics.patch": {
+    "default_version": "v1beta",
+    "tool": "ga_update"
+  },
+  "admin:properties.dataStreams.create": {
+    "default_version": "v1beta",
+    "tool": "ga_create"
+  },
+  "admin:properties.dataStreams.delete": {
+    "default_version": "v1beta",
+    "tool": "ga_delete"
+  },
+  "admin:properties.dataStreams.eventCreateRules.create": {
+    "default_version": "v1alpha",
+    "tool": "ga_create"
+  },
+  "admin:properties.dataStreams.eventCreateRules.delete": {
+    "default_version": "v1alpha",
+    "tool": "ga_delete"
+  },
+  "admin:properties.dataStreams.eventCreateRules.get": {
+    "default_version": "v1alpha",
+    "tool": "ga_get"
+  },
+  "admin:properties.dataStreams.eventCreateRules.list": {
+    "default_version": "v1alpha",
+    "tool": "ga_list"
+  },
+  "admin:properties.dataStreams.eventCreateRules.patch": {
+    "default_version": "v1alpha",
+    "tool": "ga_update"
+  },
+  "admin:properties.dataStreams.eventEditRules.create": {
+    "default_version": "v1alpha",
+    "tool": "ga_create"
+  },
+  "admin:properties.dataStreams.eventEditRules.delete": {
+    "default_version": "v1alpha",
+    "tool": "ga_delete"
+  },
+  "admin:properties.dataStreams.eventEditRules.get": {
+    "default_version": "v1alpha",
+    "tool": "ga_get"
+  },
+  "admin:properties.dataStreams.eventEditRules.list": {
+    "default_version": "v1alpha",
+    "tool": "ga_list"
+  },
+  "admin:properties.dataStreams.eventEditRules.patch": {
+    "default_version": "v1alpha",
+    "tool": "ga_update"
+  },
+  "admin:properties.dataStreams.eventEditRules.reorder": {
+    "default_version": "v1alpha",
+    "tool": "ga_reorder_event_edit_rules"
+  },
+  "admin:properties.dataStreams.get": {
+    "default_version": "v1beta",
+    "tool": "ga_get"
+  },
+  "admin:properties.dataStreams.getDataRedactionSettings": {
+    "default_version": "v1alpha",
+    "tool": "ga_get"
+  },
+  "admin:properties.dataStreams.getEnhancedMeasurementSettings": {
+    "default_version": "v1alpha",
+    "tool": "ga_get"
+  },
+  "admin:properties.dataStreams.getGlobalSiteTag": {
+    "default_version": "v1alpha",
+    "tool": "ga_get"
+  },
+  "admin:properties.dataStreams.list": {
+    "default_version": "v1beta",
+    "tool": "ga_list"
+  },
+  "admin:properties.dataStreams.measurementProtocolSecrets.create": {
+    "default_version": "v1beta",
+    "tool": "ga_create"
+  },
+  "admin:properties.dataStreams.measurementProtocolSecrets.delete": {
+    "default_version": "v1beta",
+    "tool": "ga_delete"
+  },
+  "admin:properties.dataStreams.measurementProtocolSecrets.get": {
+    "default_version": "v1beta",
+    "tool": "ga_get"
+  },
+  "admin:properties.dataStreams.measurementProtocolSecrets.list": {
+    "default_version": "v1beta",
+    "tool": "ga_list"
+  },
+  "admin:properties.dataStreams.measurementProtocolSecrets.patch": {
+    "default_version": "v1beta",
+    "tool": "ga_update"
+  },
+  "admin:properties.dataStreams.patch": {
+    "default_version": "v1beta",
+    "tool": "ga_update"
+  },
+  "admin:properties.dataStreams.sKAdNetworkConversionValueSchema.create": {
+    "default_version": "v1alpha",
+    "tool": "ga_create"
+  },
+  "admin:properties.dataStreams.sKAdNetworkConversionValueSchema.delete": {
+    "default_version": "v1alpha",
+    "tool": "ga_delete"
+  },
+  "admin:properties.dataStreams.sKAdNetworkConversionValueSchema.get": {
+    "default_version": "v1alpha",
+    "tool": "ga_get"
+  },
+  "admin:properties.dataStreams.sKAdNetworkConversionValueSchema.list": {
+    "default_version": "v1alpha",
+    "tool": "ga_list"
+  },
+  "admin:properties.dataStreams.sKAdNetworkConversionValueSchema.patch": {
+    "default_version": "v1alpha",
+    "tool": "ga_update"
+  },
+  "admin:properties.dataStreams.updateDataRedactionSettings": {
+    "default_version": "v1alpha",
+    "tool": "ga_update_settings"
+  },
+  "admin:properties.dataStreams.updateEnhancedMeasurementSettings": {
+    "default_version": "v1alpha",
+    "tool": "ga_update_settings"
+  },
+  "admin:properties.delete": {
+    "default_version": "v1beta",
+    "tool": "ga_delete"
+  },
+  "admin:properties.displayVideo360AdvertiserLinkProposals.approve": {
+    "default_version": "v1alpha",
+    "tool": "ga_review_dv360_link_proposal"
+  },
+  "admin:properties.displayVideo360AdvertiserLinkProposals.cancel": {
+    "default_version": "v1alpha",
+    "tool": "ga_review_dv360_link_proposal"
+  },
+  "admin:properties.displayVideo360AdvertiserLinkProposals.create": {
+    "default_version": "v1alpha",
+    "tool": "ga_create"
+  },
+  "admin:properties.displayVideo360AdvertiserLinkProposals.delete": {
+    "default_version": "v1alpha",
+    "tool": "ga_delete"
+  },
+  "admin:properties.displayVideo360AdvertiserLinkProposals.get": {
+    "default_version": "v1alpha",
+    "tool": "ga_get"
+  },
+  "admin:properties.displayVideo360AdvertiserLinkProposals.list": {
+    "default_version": "v1alpha",
+    "tool": "ga_list"
+  },
+  "admin:properties.displayVideo360AdvertiserLinks.create": {
+    "default_version": "v1alpha",
+    "tool": "ga_create"
+  },
+  "admin:properties.displayVideo360AdvertiserLinks.delete": {
+    "default_version": "v1alpha",
+    "tool": "ga_delete"
+  },
+  "admin:properties.displayVideo360AdvertiserLinks.get": {
+    "default_version": "v1alpha",
+    "tool": "ga_get"
+  },
+  "admin:properties.displayVideo360AdvertiserLinks.list": {
+    "default_version": "v1alpha",
+    "tool": "ga_list"
+  },
+  "admin:properties.displayVideo360AdvertiserLinks.patch": {
+    "default_version": "v1alpha",
+    "tool": "ga_update"
+  },
+  "admin:properties.expandedDataSets.create": {
+    "default_version": "v1alpha",
+    "tool": "ga_create"
+  },
+  "admin:properties.expandedDataSets.delete": {
+    "default_version": "v1alpha",
+    "tool": "ga_delete"
+  },
+  "admin:properties.expandedDataSets.get": {
+    "default_version": "v1alpha",
+    "tool": "ga_get"
+  },
+  "admin:properties.expandedDataSets.list": {
+    "default_version": "v1alpha",
+    "tool": "ga_list"
+  },
+  "admin:properties.expandedDataSets.patch": {
+    "default_version": "v1alpha",
+    "tool": "ga_update"
+  },
+  "admin:properties.firebaseLinks.create": {
+    "default_version": "v1beta",
+    "tool": "ga_create"
+  },
+  "admin:properties.firebaseLinks.delete": {
+    "default_version": "v1beta",
+    "tool": "ga_delete"
+  },
+  "admin:properties.firebaseLinks.list": {
+    "default_version": "v1beta",
+    "tool": "ga_list"
+  },
+  "admin:properties.get": {
+    "default_version": "v1beta",
+    "tool": "ga_get"
+  },
+  "admin:properties.getAttributionSettings": {
+    "default_version": "v1alpha",
+    "tool": "ga_get"
+  },
+  "admin:properties.getDataRetentionSettings": {
+    "default_version": "v1beta",
+    "tool": "ga_get"
+  },
+  "admin:properties.getGoogleSignalsSettings": {
+    "default_version": "v1alpha",
+    "tool": "ga_get"
+  },
+  "admin:properties.getReportingIdentitySettings": {
+    "default_version": "v1alpha",
+    "tool": "ga_get"
+  },
+  "admin:properties.getUserProvidedDataSettings": {
+    "default_version": "v1alpha",
+    "tool": "ga_get"
+  },
+  "admin:properties.googleAdsLinks.create": {
+    "default_version": "v1beta",
+    "tool": "ga_create"
+  },
+  "admin:properties.googleAdsLinks.delete": {
+    "default_version": "v1beta",
+    "tool": "ga_delete"
+  },
+  "admin:properties.googleAdsLinks.list": {
+    "default_version": "v1beta",
+    "tool": "ga_list"
+  },
+  "admin:properties.googleAdsLinks.patch": {
+    "default_version": "v1beta",
+    "tool": "ga_update"
+  },
+  "admin:properties.keyEvents.create": {
+    "default_version": "v1beta",
+    "tool": "ga_create"
+  },
+  "admin:properties.keyEvents.delete": {
+    "default_version": "v1beta",
+    "tool": "ga_delete"
+  },
+  "admin:properties.keyEvents.get": {
+    "default_version": "v1beta",
+    "tool": "ga_get"
+  },
+  "admin:properties.keyEvents.list": {
+    "default_version": "v1beta",
+    "tool": "ga_list"
+  },
+  "admin:properties.keyEvents.patch": {
+    "default_version": "v1beta",
+    "tool": "ga_update"
+  },
+  "admin:properties.list": {
+    "default_version": "v1beta",
+    "tool": "ga_list"
+  },
+  "admin:properties.patch": {
+    "default_version": "v1beta",
+    "tool": "ga_update"
+  },
+  "admin:properties.provisionSubproperty": {
+    "default_version": "v1alpha",
+    "tool": "ga_provision_subproperty"
+  },
+  "admin:properties.reportingDataAnnotations.create": {
+    "default_version": "v1alpha",
+    "tool": "ga_create"
+  },
+  "admin:properties.reportingDataAnnotations.delete": {
+    "default_version": "v1alpha",
+    "tool": "ga_delete"
+  },
+  "admin:properties.reportingDataAnnotations.get": {
+    "default_version": "v1alpha",
+    "tool": "ga_get"
+  },
+  "admin:properties.reportingDataAnnotations.list": {
+    "default_version": "v1alpha",
+    "tool": "ga_list"
+  },
+  "admin:properties.reportingDataAnnotations.patch": {
+    "default_version": "v1alpha",
+    "tool": "ga_update"
+  },
+  "admin:properties.rollupPropertySourceLinks.create": {
+    "default_version": "v1alpha",
+    "tool": "ga_create"
+  },
+  "admin:properties.rollupPropertySourceLinks.delete": {
+    "default_version": "v1alpha",
+    "tool": "ga_delete"
+  },
+  "admin:properties.rollupPropertySourceLinks.get": {
+    "default_version": "v1alpha",
+    "tool": "ga_get"
+  },
+  "admin:properties.rollupPropertySourceLinks.list": {
+    "default_version": "v1alpha",
+    "tool": "ga_list"
+  },
+  "admin:properties.runAccessReport": {
+    "default_version": "v1beta",
+    "tool": "ga_run_access_report"
+  },
+  "admin:properties.searchAds360Links.create": {
+    "default_version": "v1alpha",
+    "tool": "ga_create"
+  },
+  "admin:properties.searchAds360Links.delete": {
+    "default_version": "v1alpha",
+    "tool": "ga_delete"
+  },
+  "admin:properties.searchAds360Links.get": {
+    "default_version": "v1alpha",
+    "tool": "ga_get"
+  },
+  "admin:properties.searchAds360Links.list": {
+    "default_version": "v1alpha",
+    "tool": "ga_list"
+  },
+  "admin:properties.searchAds360Links.patch": {
+    "default_version": "v1alpha",
+    "tool": "ga_update"
+  },
+  "admin:properties.submitUserDeletion": {
+    "default_version": "v1alpha",
+    "tool": "ga_submit_user_deletion"
+  },
+  "admin:properties.subpropertyEventFilters.create": {
+    "default_version": "v1alpha",
+    "tool": "ga_create"
+  },
+  "admin:properties.subpropertyEventFilters.delete": {
+    "default_version": "v1alpha",
+    "tool": "ga_delete"
+  },
+  "admin:properties.subpropertyEventFilters.get": {
+    "default_version": "v1alpha",
+    "tool": "ga_get"
+  },
+  "admin:properties.subpropertyEventFilters.list": {
+    "default_version": "v1alpha",
+    "tool": "ga_list"
+  },
+  "admin:properties.subpropertyEventFilters.patch": {
+    "default_version": "v1alpha",
+    "tool": "ga_update"
+  },
+  "admin:properties.subpropertySyncConfigs.get": {
+    "default_version": "v1alpha",
+    "tool": "ga_get"
+  },
+  "admin:properties.subpropertySyncConfigs.list": {
+    "default_version": "v1alpha",
+    "tool": "ga_list"
+  },
+  "admin:properties.subpropertySyncConfigs.patch": {
+    "default_version": "v1alpha",
+    "tool": "ga_update"
+  },
+  "admin:properties.updateAttributionSettings": {
+    "default_version": "v1alpha",
+    "tool": "ga_update_settings"
+  },
+  "admin:properties.updateDataRetentionSettings": {
+    "default_version": "v1beta",
+    "tool": "ga_update_settings"
+  },
+  "admin:properties.updateGoogleSignalsSettings": {
+    "default_version": "v1alpha",
+    "tool": "ga_update_settings"
+  },
+  "admin:properties.updateReportingIdentitySettings": {
+    "default_version": "v1alpha",
+    "tool": "ga_update_settings"
+  },
+  "data:properties.audienceExports.create": {
+    "default_version": "v1beta",
+    "tool": "ga_start_async_job"
+  },
+  "data:properties.audienceExports.get": {
+    "default_version": "v1beta",
+    "tool": "ga_get"
+  },
+  "data:properties.audienceExports.list": {
+    "default_version": "v1beta",
+    "tool": "ga_list"
+  },
+  "data:properties.audienceExports.query": {
+    "default_version": "v1beta",
+    "tool": "ga_query"
+  },
+  "data:properties.audienceLists.create": {
+    "default_version": "v1alpha",
+    "tool": "ga_start_async_job"
+  },
+  "data:properties.audienceLists.get": {
+    "default_version": "v1alpha",
+    "tool": "ga_get"
+  },
+  "data:properties.audienceLists.list": {
+    "default_version": "v1alpha",
+    "tool": "ga_list"
+  },
+  "data:properties.audienceLists.query": {
+    "default_version": "v1alpha",
+    "tool": "ga_query"
+  },
+  "data:properties.batchRunPivotReports": {
+    "default_version": "v1beta",
+    "tool": "ga_batch_run_reports"
+  },
+  "data:properties.batchRunReports": {
+    "default_version": "v1beta",
+    "tool": "ga_batch_run_reports"
+  },
+  "data:properties.chat": {
+    "default_version": "v1alpha",
+    "tool": "ga_chat"
+  },
+  "data:properties.checkCompatibility": {
+    "default_version": "v1beta",
+    "tool": "ga_check_compatibility"
+  },
+  "data:properties.getMetadata": {
+    "default_version": "v1beta",
+    "tool": "ga_get_metadata"
+  },
+  "data:properties.getPropertyQuotasSnapshot": {
+    "default_version": "v1alpha",
+    "tool": "ga_get"
+  },
+  "data:properties.recurringAudienceLists.create": {
+    "default_version": "v1alpha",
+    "tool": "ga_create"
+  },
+  "data:properties.recurringAudienceLists.get": {
+    "default_version": "v1alpha",
+    "tool": "ga_get"
+  },
+  "data:properties.recurringAudienceLists.list": {
+    "default_version": "v1alpha",
+    "tool": "ga_list"
+  },
+  "data:properties.reportTasks.create": {
+    "default_version": "v1alpha",
+    "tool": "ga_start_async_job"
+  },
+  "data:properties.reportTasks.get": {
+    "default_version": "v1alpha",
+    "tool": "ga_get"
+  },
+  "data:properties.reportTasks.list": {
+    "default_version": "v1alpha",
+    "tool": "ga_list"
+  },
+  "data:properties.reportTasks.query": {
+    "default_version": "v1alpha",
+    "tool": "ga_query"
+  },
+  "data:properties.runFunnelReport": {
+    "default_version": "v1alpha",
+    "tool": "ga_run_funnel_report"
+  },
+  "data:properties.runPivotReport": {
+    "default_version": "v1beta",
+    "tool": "ga_run_pivot_report"
+  },
+  "data:properties.runRealtimeReport": {
+    "default_version": "v1beta",
+    "tool": "ga_run_realtime_report"
+  },
+  "data:properties.runReport": {
+    "default_version": "v1beta",
+    "tool": "ga_run_report"
+  }
+}

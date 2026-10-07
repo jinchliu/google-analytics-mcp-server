@@ -1,0 +1,23 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Local development artifacts
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+tmp/
+CLAUDE.local.md
+
+# OAuth material must stay outside source control.
+client_secret*.json
+application_default_credentials.json

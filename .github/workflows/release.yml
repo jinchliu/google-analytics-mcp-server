@@ -1,0 +1,68 @@
+name: Release
+
+on:
+  push:
+    tags: ['v*.*.*']
+  # Allows a failed publish to be retried against the same tag.
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  # The tagged commit passes the same gate as main before anything is built.
+  ci:
+    uses: ./.github/workflows/ci.yml
+
+  build:
+    needs: ci
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: astral-sh/setup-uv@v7
+        with:
+          python-version: '3.14'
+          enable-cache: true
+
+      # pyproject.toml is the version of record; the tag must match it.
+      - name: Check tag against project version
+        if: startsWith(github.ref, 'refs/tags/')
+        run: |
+          release_tag="${GITHUB_REF_NAME#v}"
+          package_version="$(uv version --short --frozen)"
+          if [ "$release_tag" != "$package_version" ]; then
+            echo "::error::Release tag must match pyproject.toml"
+            exit 1
+          fi
+
+      - run: uv build
+
+      # Install the built artifact without inheriting the checkout or dev environment.
+      - name: Check installed wheel
+        run: uv run --isolated --no-project --with dist/*.whl python -I scripts/check_wheel.py
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: dist
+          path: dist/
+          if-no-files-found: error
+
+  publish:
+    needs: build
+    # A manual run on a branch builds artifacts; only a tag can publish.
+    if: startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-latest
+    environment:
+      name: pypi
+      url: https://pypi.org/p/google-analytics-mcp-server
+    permissions:
+      # Trusted Publishing exchanges this OIDC token for an upload token.
+      id-token: write
+    steps:
+      - uses: actions/download-artifact@v8
+        with:
+          name: dist
+          path: dist/
+
+      - uses: pypa/gh-action-pypi-publish@release/v1
